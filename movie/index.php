@@ -1,3 +1,4 @@
+<?php $id = $_GET["id"]; ?>
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
@@ -2006,41 +2007,53 @@
                             <div id="movie-268" class="post-268 movie type-movie status-publish has-post-thumbnail hentry movie_genre-comedy movie_tag-4k-ultra movie_tag-king movie_tag-premieres movie_tag-viking">
                                 <div class="single-movie__player-container stretch-full-width">
                                     <div class="single-movie__player-container--inner container">
-                                        <nav class="masvideos-breadcrumb">
-                                            <a href="../index.html">Home</a>
-                                            <span class="delimiter">
-                                                <svg width="4px" height="7px">
-                                                    <path
-                                                        fill-rule="evenodd"
-                                                        d="M3.978,3.702 C3.986,3.785 3.966,3.868 3.903,3.934 L1.038,6.901 C0.920,7.022 0.724,7.029 0.598,6.916 L0.143,6.506 C0.017,6.393 0.010,6.203 0.127,6.082 L2.190,3.945 C2.276,3.829 2.355,3.690 2.355,3.548 C2.355,3.214 1.947,2.884 1.947,2.884 L1.963,2.877 L0.080,0.905 C-0.037,0.783 -0.029,0.593 0.095,0.479 L0.547,0.068 C0.671,-0.045 0.866,-0.039 0.983,0.083 L3.823,3.056 C3.866,3.102 3.875,3.161 3.885,3.218 C3.945,3.267 3.988,3.333 3.988,3.415 L3.988,3.681 C3.988,3.689 3.979,3.694 3.978,3.702 Z"
-                                                    />
-                                                </svg>
-                                            </span>
-                                            <a href="movie-genre/comedy/">Comedy</a>
-                                            <span class="delimiter">
-                                                <svg width="4px" height="7px">
-                                                    <path
-                                                        fill-rule="evenodd"
-                                                        d="M3.978,3.702 C3.986,3.785 3.966,3.868 3.903,3.934 L1.038,6.901 C0.920,7.022 0.724,7.029 0.598,6.916 L0.143,6.506 C0.017,6.393 0.010,6.203 0.127,6.082 L2.190,3.945 C2.276,3.829 2.355,3.690 2.355,3.548 C2.355,3.214 1.947,2.884 1.947,2.884 L1.963,2.877 L0.080,0.905 C-0.037,0.783 -0.029,0.593 0.095,0.479 L0.547,0.068 C0.671,-0.045 0.866,-0.039 0.983,0.083 L3.823,3.056 C3.866,3.102 3.875,3.161 3.885,3.218 C3.945,3.267 3.988,3.333 3.988,3.415 L3.988,3.681 C3.988,3.689 3.979,3.694 3.978,3.702 Z"
-                                                    />
-                                                </svg>
-                                            </span>
-                                            American Made
-                                        </nav>
+									<?php
+										include '../php/db.php';
+										$query = "SELECT * FROM recomended_movie WHERE id='$id'";
+										$result = mysqli_query($connect, $query);
+										while($row = mysqli_fetch_array($result)){
+											echo '<nav class="masvideos-breadcrumb">
+													<a href="../index.php">Home</a>
+													<span class="delimiter">
+														<svg width="4px" height="7px">
+															<path
+																fill-rule="evenodd"
+																d="M3.978,3.702 C3.986,3.785 3.966,3.868 3.903,3.934 L1.038,6.901 C0.920,7.022 0.724,7.029 0.598,6.916 L0.143,6.506 C0.017,6.393 0.010,6.203 0.127,6.082 L2.190,3.945 C2.276,3.829 2.355,3.690 2.355,3.548 C2.355,3.214 1.947,2.884 1.947,2.884 L1.963,2.877 L0.080,0.905 C-0.037,0.783 -0.029,0.593 0.095,0.479 L0.547,0.068 C0.671,-0.045 0.866,-0.039 0.983,0.083 L3.823,3.056 C3.866,3.102 3.875,3.161 3.885,3.218 C3.945,3.267 3.988,3.333 3.988,3.415 L3.988,3.681 C3.988,3.689 3.979,3.694 3.978,3.702 Z"
+															/>
+														</svg>
+													</span>
+													<a href="">'.$row["category"].'</a>
+													<span class="delimiter">
+														<svg width="4px" height="7px">
+															<path
+																fill-rule="evenodd"
+																d="M3.978,3.702 C3.986,3.785 3.966,3.868 3.903,3.934 L1.038,6.901 C0.920,7.022 0.724,7.029 0.598,6.916 L0.143,6.506 C0.017,6.393 0.010,6.203 0.127,6.082 L2.190,3.945 C2.276,3.829 2.355,3.690 2.355,3.548 C2.355,3.214 1.947,2.884 1.947,2.884 L1.963,2.877 L0.080,0.905 C-0.037,0.783 -0.029,0.593 0.095,0.479 L0.547,0.068 C0.671,-0.045 0.866,-0.039 0.983,0.083 L3.823,3.056 C3.866,3.102 3.875,3.161 3.885,3.218 C3.945,3.267 3.988,3.333 3.988,3.415 L3.988,3.681 C3.988,3.689 3.979,3.694 3.978,3.702 Z"
+															/>
+														</svg>
+													</span>
+													'.$row["name"].'
+												</nav>';
+										}
+									?>
 
 										<!-- body -->
-                                        <div class="movie__head">
+										<?php
+										include '../php/db.php';
+										$query = "SELECT * FROM recomended_movie WHERE id='$id'";
+										$result = mysqli_query($connect, $query);
+										while($row = mysqli_fetch_array($result)){
+                                        echo '<div class="movie__head">
                                             <div class="movie__player">
                                                 <iframe width="1024" height="574" src="https://www.youtube.com/embed/AEBIJRAkujM" frameborder="0" allowfullscreen></iframe>
                                             </div>
                                         </div>
 
                                         <div class="summary entry-summary">
-                                            <h1 class="movie_title entry-title">American Made</h1>
+                                            <h1 class="movie_title entry-title">'.$row["name"].'</h1>
                                             <div class="movie__info--head">
                                                 <div class="movie__meta">
-                                                    <span class="movie__meta--release-year">2017</span><span class="movie__meta--movie-run-time">1hr 55 mins</span><span class="movie__meta--censor-rating">R</span>
-                                                    <span class="movie__meta--genre"><a href="movie-genre/comedy/" rel="tag">Comedy</a></span>
+                                                    <span class="movie__meta--release-year">2017</span><span class="movie__meta--movie-run-time">'.$row["duration"].'</span><span class="movie__meta--censor-rating">R</span>
+                                                    <span class="movie__meta--genre"><a href="movie-genre/comedy/" rel="tag">'.$row["category"].'</a></span>
                                                 </div>
                                                 <div class="movie__rating-with-playlist">
                                                     <a href="movie/american-made/#reviews" class="avg-rating">
@@ -2067,7 +2080,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div>';
+										}
+										?>
 										<!-- body end -->
 										
                                     </div>
@@ -2079,131 +2094,73 @@
                                             <div class="movies columns-8">
                                                 <div class="movies__inner">
 
-                                                    <div class="post-286 movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-sci-fi movie_tag-4k-ultra movie_tag-brother movie_tag-king movie_tag-viking">
-                                                        <div class="movie__poster">
-                                                            <a href="movie/downsizing/" class="masvideos-LoopMovie-link masvideos-loop-movie__link movie__link">
-                                                                <img
-                                                                    width="300"
-                                                                    height="450"
-                                                                    src="../uploads/sites/2/2019/04/18-300x450.jpg"
-                                                                    class="movie__poster--image"
-                                                                    alt=""
-                                                                    sizes="(max-width: 300px) 100vw, 300px"
-                                                                />
-                                                            </a>
-                                                        </div>
-                                                        <div class="movie__body">
-                                                            <div class="movie__info">
-                                                                <div class="movie__info--head">
-                                                                    <div class="movie__meta">
-                                                                        <span class="movie__meta--release-year">2018</span><span class="movie__meta--movie-run-time">2hr 15 mins</span><span class="movie__meta--censor-rating">R</span>
-                                                                        <span class="movie__meta--genre"><a href="movie-genre/action/" rel="tag">Action</a>, <a href="movie-genre/sci-fi/" rel="tag">Sci-Fi</a></span>
-                                                                    </div>
-                                                                    <a href="movie/downsizing/" class="masvideos-LoopMovie-link masvideos-loop-movie__link movie__link"><h3 class="masvideos-loop-movie__title movie__title">Downsizing</h3></a>
-                                                                </div>
-                                                                <div class="movie__short-description">
-                                                                    <div>
-                                                                        <p>
-                                                                            A social satire in which a man realizes he would have a better life if he were to shrink himself to five inches tall, allowing him to live in wealth and splendor.
-                                                                        </p>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="movie__actions">
-                                                                    <a href="movie/downsizing/" class="movie-actions--link_watch">Watch Now</a>
-                                                                    <div class="movie-actions--link_add-to-playlist dropdown">
-                                                                        <a class="dropdown-toggle" href="movie/downsizing/" data-toggle="dropdown">+ Playlist</a>
-                                                                        <div class="dropdown-menu">
-                                                                            <a class="login-link" href="my-account/movie-playlists/">Sign in to add this movie to a playlist.</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="movie__review-info">
-                                                                <a href="movie/downsizing/#reviews" class="avg-rating">
-                                                                    <span class="rating-with-count">
-                                                                        <svg class="vodi-svg" width="40px" height="39px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 39">
-                                                                            <title>play</title>
-                                                                            <path
-                                                                                fill-rule="evenodd"
-                                                                                d="M19.633,-0.000 C21.509,0.035 21.530,1.174 22.167,2.414 C23.329,4.679 24.406,7.067 25.572,9.338 C25.853,9.886 26.431,11.640 26.918,11.834 C27.486,12.203 29.345,12.109 30.165,12.316 C32.170,12.825 34.489,12.860 36.500,13.364 C37.516,13.618 38.689,13.413 39.430,13.927 C39.689,14.107 39.770,14.504 39.984,14.732 C40.047,16.499 39.096,16.843 38.163,17.792 C36.473,19.509 34.784,21.227 33.095,22.944 C32.585,23.462 31.092,24.543 31.036,25.359 C31.423,25.951 31.307,27.455 31.511,28.258 C32.138,30.727 32.213,33.522 32.857,35.987 C33.142,37.078 33.016,38.241 32.303,38.724 C31.108,39.533 29.632,38.193 28.819,37.758 C26.695,36.623 24.601,35.624 22.483,34.457 C21.979,34.179 20.607,33.178 20.108,33.088 C19.748,33.023 18.163,34.107 17.812,34.296 C15.557,35.505 13.340,36.640 11.080,37.839 C10.548,38.120 9.180,39.226 8.309,38.966 C6.955,38.558 6.874,36.993 7.280,35.423 C7.716,33.733 7.697,31.880 8.151,30.109 C8.527,28.642 8.907,26.529 9.022,24.957 C8.092,24.344 7.202,23.107 6.408,22.300 C4.760,20.625 3.059,18.990 1.340,17.389 C0.646,16.742 -0.578,15.515 0.311,14.249 C0.915,13.388 2.364,13.656 3.557,13.364 C6.678,12.599 10.114,12.468 13.298,11.834 C14.186,9.747 15.306,7.711 16.307,5.716 C16.954,4.426 17.496,3.163 18.128,1.931 C18.334,1.531 18.358,1.093 18.603,0.724 C18.845,0.362 19.299,0.273 19.633,-0.000 Z"
-                                                                            />
-                                                                        </svg>
-                                                                        <span class="avg-rating-number"> 8.0</span>
-                                                                    </span>
-                                                                    <span class="rating-number-with-text">
-                                                                        <span class="avg-rating-number"> 8.0</span>
-                                                                        <span class="avg-rating-text"> <span>1</span> Vote </span>
-                                                                    </span>
-                                                                </a>
-                                                                <div class="viewers-count"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="post-320 movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_tag-4k-ultra movie_tag-king movie_tag-premieres movie_tag-viking">
-                                                        <div class="movie__poster">
-                                                            <a href="movie/renegades/" class="masvideos-LoopMovie-link masvideos-loop-movie__link movie__link">
-                                                                <img
-                                                                    width="300"
-                                                                    height="450"
-                                                                    src="../uploads/sites/2/2019/04/35-brothers-bloom-300x450.jpg"
-                                                                    class="movie__poster--image"
-                                                                    alt=""
-                                                                    srcset="
-                                                                        ../uploads/sites/2/2019/04/35-brothers-bloom-300x450.jpg 300w,
-                                                                        ../uploads/sites/2/2019/04/35-brothers-bloom-66x98.jpg    66w,
-                                                                        ../uploads/sites/2/2019/04/35-brothers-bloom-600x900.jpg 600w,
-                                                                        ../uploads/sites/2/2019/04/35-brothers-bloom-150x225.jpg 150w
-                                                                    "
-                                                                    sizes="(max-width: 300px) 100vw, 300px"
-                                                                />
-                                                            </a>
-                                                        </div>
-                                                        <div class="movie__body">
-                                                            <div class="movie__info">
-                                                                <div class="movie__info--head">
-                                                                    <div class="movie__meta">
-                                                                        <span class="movie__meta--release-year">2018</span><span class="movie__meta--movie-run-time">1hr 46mins</span><span class="movie__meta--censor-rating">PG-13</span>
-                                                                        <span class="movie__meta--genre"><a href="movie-genre/action/" rel="tag">Action</a>, <a href="movie-genre/adventure/" rel="tag">Adventure</a></span>
-                                                                    </div>
-                                                                    <a href="movie/renegades/" class="masvideos-LoopMovie-link masvideos-loop-movie__link movie__link"><h3 class="masvideos-loop-movie__title movie__title">Renegades</h3></a>
-                                                                </div>
-                                                                <div class="movie__short-description">
-                                                                    <div>
-                                                                        <p>A team of Navy SEALs discover an underwater treasure in a Bosnian lake.</p>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="movie__actions">
-                                                                    <a href="movie/renegades/" class="movie-actions--link_watch">Watch Now</a>
-                                                                    <div class="movie-actions--link_add-to-playlist dropdown">
-                                                                        <a class="dropdown-toggle" href="movie/renegades/" data-toggle="dropdown">+ Playlist</a>
-                                                                        <div class="dropdown-menu">
-                                                                            <a class="login-link" href="my-account/movie-playlists/">Sign in to add this movie to a playlist.</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="movie__review-info">
-                                                                <a href="movie/renegades/#reviews" class="avg-rating">
-                                                                    <span class="rating-with-count">
-                                                                        <svg class="vodi-svg" width="40px" height="39px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 39">
-                                                                            <title>play</title>
-                                                                            <path
-                                                                                fill-rule="evenodd"
-                                                                                d="M19.633,-0.000 C21.509,0.035 21.530,1.174 22.167,2.414 C23.329,4.679 24.406,7.067 25.572,9.338 C25.853,9.886 26.431,11.640 26.918,11.834 C27.486,12.203 29.345,12.109 30.165,12.316 C32.170,12.825 34.489,12.860 36.500,13.364 C37.516,13.618 38.689,13.413 39.430,13.927 C39.689,14.107 39.770,14.504 39.984,14.732 C40.047,16.499 39.096,16.843 38.163,17.792 C36.473,19.509 34.784,21.227 33.095,22.944 C32.585,23.462 31.092,24.543 31.036,25.359 C31.423,25.951 31.307,27.455 31.511,28.258 C32.138,30.727 32.213,33.522 32.857,35.987 C33.142,37.078 33.016,38.241 32.303,38.724 C31.108,39.533 29.632,38.193 28.819,37.758 C26.695,36.623 24.601,35.624 22.483,34.457 C21.979,34.179 20.607,33.178 20.108,33.088 C19.748,33.023 18.163,34.107 17.812,34.296 C15.557,35.505 13.340,36.640 11.080,37.839 C10.548,38.120 9.180,39.226 8.309,38.966 C6.955,38.558 6.874,36.993 7.280,35.423 C7.716,33.733 7.697,31.880 8.151,30.109 C8.527,28.642 8.907,26.529 9.022,24.957 C8.092,24.344 7.202,23.107 6.408,22.300 C4.760,20.625 3.059,18.990 1.340,17.389 C0.646,16.742 -0.578,15.515 0.311,14.249 C0.915,13.388 2.364,13.656 3.557,13.364 C6.678,12.599 10.114,12.468 13.298,11.834 C14.186,9.747 15.306,7.711 16.307,5.716 C16.954,4.426 17.496,3.163 18.128,1.931 C18.334,1.531 18.358,1.093 18.603,0.724 C18.845,0.362 19.299,0.273 19.633,-0.000 Z"
-                                                                            />
-                                                                        </svg>
-                                                                        <span class="avg-rating-number"> 8.0</span>
-                                                                    </span>
-                                                                    <span class="rating-number-with-text">
-                                                                        <span class="avg-rating-number"> 8.0</span>
-                                                                        <span class="avg-rating-text"> <span>1</span> Vote </span>
-                                                                    </span>
-                                                                </a>
-                                                                <div class="viewers-count"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+												<?php
+													include '../php/db.php';
+													$query = "SELECT * FROM recomended_movie";
+													$result = mysqli_query($connect, $query);
+													while($row = mysqli_fetch_array($result)){
+														echo '<div class="post-286 movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-sci-fi movie_tag-4k-ultra movie_tag-brother movie_tag-king movie_tag-viking">
+																<div class="movie__poster">
+																	<a href="movie/downsizing/" class="masvideos-LoopMovie-link masvideos-loop-movie__link movie__link">
+																		<img
+																			width="300"
+																			height="450"
+																			src="../uploads/'.$row["image"].'"
+																			class="movie__poster--image"
+																			alt=""
+																			sizes="(max-width: 300px) 100vw, 300px"
+																		/>
+																	</a>
+																</div>
+																<div class="movie__body">
+																	<div class="movie__info">
+																		<div class="movie__info--head">
+																			<div class="movie__meta">
+																				<span class="movie__meta--release-year">'.$row["year"].'</span><span class="movie__meta--movie-run-time">2hr 15 mins</span><span class="movie__meta--censor-rating">R</span>
+																				<span class="movie__meta--genre"><a href="movie-genre/action/" rel="tag">Action</a>, <a href="movie-genre/sci-fi/" rel="tag">Sci-Fi</a></span>
+																			</div>
+																			<a href="movie/downsizing/" class="masvideos-LoopMovie-link masvideos-loop-movie__link movie__link"><h3 class="masvideos-loop-movie__title movie__title">'.$row["name"].'</h3></a>
+																		</div>
+																		<div class="movie__short-description">
+																			<div>
+																				<p>
+																					A social satire in which a man realizes he would have a better life if he were to shrink himself to five inches tall, allowing him to live in wealth and splendor.
+																				</p>
+																			</div>
+																		</div>
+																		<div class="movie__actions">
+																			<a href="movie/downsizing/" class="movie-actions--link_watch">Watch Now</a>
+																			<div class="movie-actions--link_add-to-playlist dropdown">
+																				<a class="dropdown-toggle" href="movie/downsizing/" data-toggle="dropdown">+ Playlist</a>
+																				<div class="dropdown-menu">
+																					<a class="login-link" href="my-account/movie-playlists/">Sign in to add this movie to a playlist.</a>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="movie__review-info">
+																		<a href="movie/downsizing/#reviews" class="avg-rating">
+																			<span class="rating-with-count">
+																				<svg class="vodi-svg" width="40px" height="39px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 39">
+																					<title>play</title>
+																					<path
+																						fill-rule="evenodd"
+																						d="M19.633,-0.000 C21.509,0.035 21.530,1.174 22.167,2.414 C23.329,4.679 24.406,7.067 25.572,9.338 C25.853,9.886 26.431,11.640 26.918,11.834 C27.486,12.203 29.345,12.109 30.165,12.316 C32.170,12.825 34.489,12.860 36.500,13.364 C37.516,13.618 38.689,13.413 39.430,13.927 C39.689,14.107 39.770,14.504 39.984,14.732 C40.047,16.499 39.096,16.843 38.163,17.792 C36.473,19.509 34.784,21.227 33.095,22.944 C32.585,23.462 31.092,24.543 31.036,25.359 C31.423,25.951 31.307,27.455 31.511,28.258 C32.138,30.727 32.213,33.522 32.857,35.987 C33.142,37.078 33.016,38.241 32.303,38.724 C31.108,39.533 29.632,38.193 28.819,37.758 C26.695,36.623 24.601,35.624 22.483,34.457 C21.979,34.179 20.607,33.178 20.108,33.088 C19.748,33.023 18.163,34.107 17.812,34.296 C15.557,35.505 13.340,36.640 11.080,37.839 C10.548,38.120 9.180,39.226 8.309,38.966 C6.955,38.558 6.874,36.993 7.280,35.423 C7.716,33.733 7.697,31.880 8.151,30.109 C8.527,28.642 8.907,26.529 9.022,24.957 C8.092,24.344 7.202,23.107 6.408,22.300 C4.760,20.625 3.059,18.990 1.340,17.389 C0.646,16.742 -0.578,15.515 0.311,14.249 C0.915,13.388 2.364,13.656 3.557,13.364 C6.678,12.599 10.114,12.468 13.298,11.834 C14.186,9.747 15.306,7.711 16.307,5.716 C16.954,4.426 17.496,3.163 18.128,1.931 C18.334,1.531 18.358,1.093 18.603,0.724 C18.845,0.362 19.299,0.273 19.633,-0.000 Z"
+																					/>
+																				</svg>
+																				<span class="avg-rating-number"> 8.0</span>
+																			</span>
+																			<span class="rating-number-with-text">
+																				<span class="avg-rating-number"> 8.0</span>
+																				<span class="avg-rating-text"> <span>1</span> Vote </span>
+																			</span>
+																		</a>
+																		<div class="viewers-count"></div>
+																	</div>
+																</div>
+                                                    		</div>';
+													}
+												?>
 
                                                 </div>
                                             </div>
@@ -2223,88 +2180,86 @@
                                     <div class="tab-content">
                                         <div id="tab-614485e8ef5c2description" class="tab-pane active show">
                                             <div id="movie__description-tab" class="movie__description-tab">
-                                                <div class="movie__info--left">
-                                                    <div class="movie__poster">
-                                                        <a href="movie/american-made/" class="masvideos-LoopMovie-link masvideos-loop-movie__link movie__link">
-                                                            <img
-                                                                width="300"
-                                                                height="450"
-                                                                src="../uploads/sites/2/2019/04/9-300x450.jpg"
-                                                                class="movie__poster--image"
-                                                                alt=""
-                                                                srcset="
-                                                                    ../uploads/sites/2/2019/04/9-300x450.jpg 300w,
-                                                                    ../uploads/sites/2/2019/04/9-66x98.jpg    66w,
-                                                                    ../uploads/sites/2/2019/04/9-200x300.jpg 200w,
-                                                                    ../uploads/sites/2/2019/04/9-600x900.jpg 600w,
-                                                                    ../uploads/sites/2/2019/04/9-150x225.jpg 150w,
-                                                                    ../uploads/sites/2/2019/04/9.jpg         668w
-                                                                "
-                                                                sizes="(max-width: 300px) 100vw, 300px"
-                                                            />
-                                                        </a>
-                                                    </div>
-                                                    <div class="movie__body">
-                                                        <h1 class="movie_title entry-title">American Made</h1>
-                                                        <div class="movie__rating-with-playlist">
-                                                            <a href="movie/american-made/#reviews" class="avg-rating">
-                                                                <span class="rating-with-count">
-                                                                    <svg class="vodi-svg" width="40px" height="39px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 39">
-                                                                        <title>play</title>
-                                                                        <path
-                                                                            fill-rule="evenodd"
-                                                                            d="M19.633,-0.000 C21.509,0.035 21.530,1.174 22.167,2.414 C23.329,4.679 24.406,7.067 25.572,9.338 C25.853,9.886 26.431,11.640 26.918,11.834 C27.486,12.203 29.345,12.109 30.165,12.316 C32.170,12.825 34.489,12.860 36.500,13.364 C37.516,13.618 38.689,13.413 39.430,13.927 C39.689,14.107 39.770,14.504 39.984,14.732 C40.047,16.499 39.096,16.843 38.163,17.792 C36.473,19.509 34.784,21.227 33.095,22.944 C32.585,23.462 31.092,24.543 31.036,25.359 C31.423,25.951 31.307,27.455 31.511,28.258 C32.138,30.727 32.213,33.522 32.857,35.987 C33.142,37.078 33.016,38.241 32.303,38.724 C31.108,39.533 29.632,38.193 28.819,37.758 C26.695,36.623 24.601,35.624 22.483,34.457 C21.979,34.179 20.607,33.178 20.108,33.088 C19.748,33.023 18.163,34.107 17.812,34.296 C15.557,35.505 13.340,36.640 11.080,37.839 C10.548,38.120 9.180,39.226 8.309,38.966 C6.955,38.558 6.874,36.993 7.280,35.423 C7.716,33.733 7.697,31.880 8.151,30.109 C8.527,28.642 8.907,26.529 9.022,24.957 C8.092,24.344 7.202,23.107 6.408,22.300 C4.760,20.625 3.059,18.990 1.340,17.389 C0.646,16.742 -0.578,15.515 0.311,14.249 C0.915,13.388 2.364,13.656 3.557,13.364 C6.678,12.599 10.114,12.468 13.298,11.834 C14.186,9.747 15.306,7.711 16.307,5.716 C16.954,4.426 17.496,3.163 18.128,1.931 C18.334,1.531 18.358,1.093 18.603,0.724 C18.845,0.362 19.299,0.273 19.633,-0.000 Z"
-                                                                        />
-                                                                    </svg>
-                                                                    <span class="avg-rating-number"> 7.0</span>
-                                                                </span>
-                                                                <span class="rating-number-with-text">
-                                                                    <span class="avg-rating-number"> 7.0</span>
-                                                                    <span class="avg-rating-text"> <span>1</span> Vote </span>
-                                                                </span>
-                                                            </a>
-                                                            <div class="movie-actions--link_add-to-playlist dropdown">
-                                                                <a class="dropdown-toggle" href="movie/american-made/" data-toggle="dropdown">+ Playlist</a>
-                                                                <div class="dropdown-menu">
-                                                                    <a class="login-link" href="my-account/movie-playlists/">Sign in to add this movie to a playlist.</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="movie__meta">
-                                                            <span class="movie__meta--release-year">2017</span><span class="movie__meta--movie-run-time">1hr 55 mins</span><span class="movie__meta--censor-rating">R</span>
-                                                            <span class="movie__meta--genre"><a href="movie-genre/comedy/" rel="tag">Comedy</a></span>
-                                                        </div>
-                                                        <div class="vodi-views-likes">
-                                                            <div class="vodi-jetpack-views"><span>18.9K views</span></div>
-                                                            <div class="wpulike wpulike-default">
-                                                                <div class="wp_ulike_general_class wp_ulike_is_not_liked">
-                                                                    <button
-                                                                        type="button"
-                                                                        aria-label="Like Button"
-                                                                        data-ulike-id="268"
-                                                                        data-ulike-nonce="7b70cc6dbb"
-                                                                        data-ulike-type="likeThis"
-                                                                        data-ulike-template="wpulike-default"
-                                                                        data-ulike-display-likers="0"
-                                                                        data-ulike-disable-pophover="0"
-                                                                        class="wp_ulike_btn wp_ulike_put_image wp_likethis_268"
-                                                                    ></button>
-                                                                    <span class="count-box">41+</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="movie__description">
-                                                            <div></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="movie__info--right">
-                                                    <div class="movie__sharing vodi-sharing"></div>
-                                                    <span class="movie__tags">
-                                                        Tags: <a href="movie-tag/4k-ultra/" rel="tag">4K Ultra</a>, <a href="movie-tag/king/" rel="tag">King</a>, <a href="movie-tag/premieres/" rel="tag">Premieres</a>,
-                                                        <a href="movie-tag/viking/" rel="tag">viking</a>
-                                                    </span>
-                                                </div>
+											<?php
+												include '../php/db.php';
+												$query = "SELECT * FROM recomended_movie WHERE id='$id'";
+												$result = mysqli_query($connect, $query);
+												while($row = mysqli_fetch_array($result)){
+													echo '<div class="movie__info--left">
+															<div class="movie__poster">
+																<a href="movie/american-made/" class="masvideos-LoopMovie-link masvideos-loop-movie__link movie__link">
+																	<img
+																		width="300"
+																		height="450"
+																		src="../uploads/'.$row["image"].'"
+																		class="movie__poster--image"
+																		alt=""
+																	/>
+																</a>
+															</div>
+															<div class="movie__body">
+																<h1 class="movie_title entry-title">'.$row["name"].'</h1>
+																<div class="movie__rating-with-playlist">
+																	<a href="movie/american-made/#reviews" class="avg-rating">
+																		<span class="rating-with-count">
+																			<svg class="vodi-svg" width="40px" height="39px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 39">
+																				<title>play</title>
+																				<path
+																					fill-rule="evenodd"
+																					d="M19.633,-0.000 C21.509,0.035 21.530,1.174 22.167,2.414 C23.329,4.679 24.406,7.067 25.572,9.338 C25.853,9.886 26.431,11.640 26.918,11.834 C27.486,12.203 29.345,12.109 30.165,12.316 C32.170,12.825 34.489,12.860 36.500,13.364 C37.516,13.618 38.689,13.413 39.430,13.927 C39.689,14.107 39.770,14.504 39.984,14.732 C40.047,16.499 39.096,16.843 38.163,17.792 C36.473,19.509 34.784,21.227 33.095,22.944 C32.585,23.462 31.092,24.543 31.036,25.359 C31.423,25.951 31.307,27.455 31.511,28.258 C32.138,30.727 32.213,33.522 32.857,35.987 C33.142,37.078 33.016,38.241 32.303,38.724 C31.108,39.533 29.632,38.193 28.819,37.758 C26.695,36.623 24.601,35.624 22.483,34.457 C21.979,34.179 20.607,33.178 20.108,33.088 C19.748,33.023 18.163,34.107 17.812,34.296 C15.557,35.505 13.340,36.640 11.080,37.839 C10.548,38.120 9.180,39.226 8.309,38.966 C6.955,38.558 6.874,36.993 7.280,35.423 C7.716,33.733 7.697,31.880 8.151,30.109 C8.527,28.642 8.907,26.529 9.022,24.957 C8.092,24.344 7.202,23.107 6.408,22.300 C4.760,20.625 3.059,18.990 1.340,17.389 C0.646,16.742 -0.578,15.515 0.311,14.249 C0.915,13.388 2.364,13.656 3.557,13.364 C6.678,12.599 10.114,12.468 13.298,11.834 C14.186,9.747 15.306,7.711 16.307,5.716 C16.954,4.426 17.496,3.163 18.128,1.931 C18.334,1.531 18.358,1.093 18.603,0.724 C18.845,0.362 19.299,0.273 19.633,-0.000 Z"
+																				/>
+																			</svg>
+																			<span class="avg-rating-number"> 7.0</span>
+																		</span>
+																		<span class="rating-number-with-text">
+																			<span class="avg-rating-number"> 7.0</span>
+																			<span class="avg-rating-text"> <span>1</span> Vote </span>
+																		</span>
+																	</a>
+																	<div class="movie-actions--link_add-to-playlist dropdown">
+																		<a class="dropdown-toggle" href="movie/american-made/" data-toggle="dropdown">+ Playlist</a>
+																		<div class="dropdown-menu">
+																			<a class="login-link" href="my-account/movie-playlists/">Sign in to add this movie to a playlist.</a>
+																		</div>
+																	</div>
+																</div>
+																<div class="movie__meta">
+																	<span class="movie__meta--release-year">2017</span><span class="movie__meta--movie-run-time">1hr 55 mins</span><span class="movie__meta--censor-rating">R</span>
+																	<span class="movie__meta--genre"><a href="movie-genre/comedy/" rel="tag">Comedy</a></span>
+																</div>
+																<div class="vodi-views-likes">
+																	<div class="vodi-jetpack-views"><span>18.9K views</span></div>
+																	<div class="wpulike wpulike-default">
+																		<div class="wp_ulike_general_class wp_ulike_is_not_liked">
+																			<button
+																				type="button"
+																				aria-label="Like Button"
+																				data-ulike-id="268"
+																				data-ulike-nonce="7b70cc6dbb"
+																				data-ulike-type="likeThis"
+																				data-ulike-template="wpulike-default"
+																				data-ulike-display-likers="0"
+																				data-ulike-disable-pophover="0"
+																				class="wp_ulike_btn wp_ulike_put_image wp_likethis_268"
+																			></button>
+																			<span class="count-box">41+</span>
+																		</div>
+																	</div>
+																</div>
+																<div class="movie__description">
+																	<div></div>
+																</div>
+															</div>
+														</div>
+														<div class="movie__info--right">
+															<div class="movie__sharing vodi-sharing"></div>
+															<span class="movie__tags">
+																Tags: <a href="movie-tag/4k-ultra/" rel="tag">4K Ultra</a>, <a href="movie-tag/king/" rel="tag">King</a>, <a href="movie-tag/premieres/" rel="tag">Premieres</a>,
+																<a href="movie-tag/viking/" rel="tag">viking</a>
+															</span>
+														</div>';
+												}
+											?>
                                             </div>
                                         </div>
                                         <div id="tab-614485e8ef5c2reviews" class="tab-pane">
