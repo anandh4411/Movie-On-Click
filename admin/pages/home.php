@@ -38,31 +38,8 @@ if (isset($_SESSION["admin-username"])){
       <div class="container">
         <div class="row">
   
-          <!-- New Recomended Movie -->
-          <div class="col-md-5">
-            <div class="card" style="width: 25rem;">
-              <h4>Add a new Admin User</h4>
-              <form action="../php/new-admin.php" method="post" enctype="multipart/form-data">
-                  <div class="form-group">
-                      <label for="exampleInputEmail1">Username</label>
-                      <input name="username" type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Username"/>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Password</label>
-                    <input name="password" type="password" class="form-control" id="exampleInputEmail1" placeholder="Enter Password"/>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Confirm Password</label>
-                    <input name="cpassword" type="password" class="form-control" id="exampleInputEmail1" placeholder="Confirm Password"/>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
-            </div>
-          </div>
-          <!-- New Recomended Movie End -->
-  
           <!-- New Movie -->
-          <div class="col-md-5">
+          <div class="">
             <!-- New Movie -->
             <div class="card" style="width: 25rem;">
               <h4>Add a new Movie</h4>
