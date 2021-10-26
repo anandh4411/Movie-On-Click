@@ -12,9 +12,10 @@ while($row = mysqli_fetch_array($result)){
         session_start();
         $_SESSION["admin-username"] = $username;
         header("Location: ../pages/home.php");
+        break;
     }
     else{
-        header("Location: ../index.php");
+        echo 'Username or Password is incorrect';
     }
 }
 

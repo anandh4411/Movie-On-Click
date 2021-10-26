@@ -11,8 +11,6 @@ if ($password == $cpassword) {
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
     $query = "INSERT INTO user (name, email, password) VALUES ('$name', '$email', '$hashed_password')";
     mysqli_query($connect, $query);
-    session_start();
-    $_SESSION["username"] = $name;
     header("Location: ../index.php");
 }
 else{

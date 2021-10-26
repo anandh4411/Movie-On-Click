@@ -131,47 +131,47 @@
                             </div>
                             <div class="site-header__user-account dropdown">
                             <?php
-                                    if (isset($_SESSION["username"])){
-                                        echo '<span>'.$_SESSION["username"].'</span>
-                                            <a href="my-account/" class="site-header__user-account--link" data-toggle="dropdown">
-                                                <svg width="32px" height="32px">
-                                                    <image
-                                                        x="0px"
-                                                        y="0px"
-                                                        width="32px"
-                                                        height="32px"
-                                                        xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACB1BMVEW7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu3t7eys7KztLO4uLi6u7q0tbSxsrG2t7awsrC7vLu8vLy1trW8vby1tbWysrK6urq3uLe5urm9vr24ubitrq2wsbCsrazV1dXs7Oz29vb39/fw8PDe3t6vsK/v7+/////5+vnLy8urrKuxsbHGx8aur67k5OT4+Pizs7P9/f3R0tGurq7Oz87j4+OsrqzU1NTo6OiusK7+/v7k5eT4+fjGyMa7u7v6+vrMzMyrq6u+vr7Ky8ri4uLt7e3u7u7m5+bT1NOwsLC+v77Q0NDe397f39/T09O/v7/FxsX5+fn09PS9vb37+/v09fTNzs3g4ODh4uHX2Nf8/PzY2djIyMjIycjU1dTl5uXx8fHm5ubV1tVi3+TsAAAAUnRSTlMADleWxOHwxphZESftmiuDiBvN0iAq8TAW9xzX340dI5ymCPj9VV+lydDl5/P05srRnqdjCvr+EKCqipTd5Pb7IfI31NmLkAQvojIVn+PLoWIYYNJBTgAAAAFiS0dEca8HXOIAAAAHdElNRQfjBQECDwMxTbKCAAACG0lEQVQ4y21T90PTQBQ+RKpY3FisExcuEHEvFPdeXLikJLnakjbVgjESSEutqIiKIo66R90L/SNtbzTp+H66e9/37r17A4ACqqZUT63xeGqmTa+dAcrhra7rhEIXQl2iFPDMnFXKz0bdoqzIBIosdqM5RfTceYKKZRdwUJhf7/AL6iD35lAU6Gvg/ELfJe4eCgd62FGT/IuYYDGkPI5E9RASYiK9anAJyw8yFx1evhLv7buKYwoJqMCleX4ZUskVG+iaSXC936ICFS3PCRoHyItKUOw1OQZtYsMDKwBYuUqgEaxEgTeTQxFiE1dXgTWdlFdxyhGYN9LM2gQaJVoB46aLN4ctWg19LVjH/nDrtltwJ42IFa4HG8JUMFLpBTm8ETSHeA53K+SAmkELE8jWqMPfY7/ICzYFWHfcdbhv40KIVok3Z+RBH6XHHj7ivYWbQZvOL+N6+vHEk6fPnoejCh8dfQuo5SHkjB158fLV6zdvg3aGj4e6FWzbTkqtida74SQN8T4xGBM0UuodOwHYlW+WZosT7jok1HROgfXduW7WI1HRoviDWYT4eEzLtdubH4g98GOmZ8wsQVY2NLiXjtQ+Q/pkliE+ZLTzod/fb1bA5wMdfKwbDn4p57/6DzmL0XH42/diOvXjiLdot47+TLgkqdFfx46XLOeJtpbffyaT2Wxy8u8//8lTFfb7dNOZ1rMeX/u58xcuOtb/keQ/CDzeyUsAAAAASUVORK5CYII="
-                                                    />
-                                                </svg>
-                                            </a>
-                                            <ul class="dropdown-menu sub-menu">
-                                                <li>
-                                                    <a href="php/logout.php" data-toggle="modal" data-target="#modal-register-login">Logout</a>
-                                                </li>
-                                            </ul>';
-                                    }
-                                    else {
-                                        echo '<a href="my-account/" class="site-header__user-account--link" data-toggle="dropdown">
-                                                <svg width="32px" height="32px">
-                                                    <image
-                                                        x="0px"
-                                                        y="0px"
-                                                        width="32px"
-                                                        height="32px"
-                                                        xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACB1BMVEW7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu3t7eys7KztLO4uLi6u7q0tbSxsrG2t7awsrC7vLu8vLy1trW8vby1tbWysrK6urq3uLe5urm9vr24ubitrq2wsbCsrazV1dXs7Oz29vb39/fw8PDe3t6vsK/v7+/////5+vnLy8urrKuxsbHGx8aur67k5OT4+Pizs7P9/f3R0tGurq7Oz87j4+OsrqzU1NTo6OiusK7+/v7k5eT4+fjGyMa7u7v6+vrMzMyrq6u+vr7Ky8ri4uLt7e3u7u7m5+bT1NOwsLC+v77Q0NDe397f39/T09O/v7/FxsX5+fn09PS9vb37+/v09fTNzs3g4ODh4uHX2Nf8/PzY2djIyMjIycjU1dTl5uXx8fHm5ubV1tVi3+TsAAAAUnRSTlMADleWxOHwxphZESftmiuDiBvN0iAq8TAW9xzX340dI5ymCPj9VV+lydDl5/P05srRnqdjCvr+EKCqipTd5Pb7IfI31NmLkAQvojIVn+PLoWIYYNJBTgAAAAFiS0dEca8HXOIAAAAHdElNRQfjBQECDwMxTbKCAAACG0lEQVQ4y21T90PTQBQ+RKpY3FisExcuEHEvFPdeXLikJLnakjbVgjESSEutqIiKIo66R90L/SNtbzTp+H66e9/37r17A4ACqqZUT63xeGqmTa+dAcrhra7rhEIXQl2iFPDMnFXKz0bdoqzIBIosdqM5RfTceYKKZRdwUJhf7/AL6iD35lAU6Gvg/ELfJe4eCgd62FGT/IuYYDGkPI5E9RASYiK9anAJyw8yFx1evhLv7buKYwoJqMCleX4ZUskVG+iaSXC936ICFS3PCRoHyItKUOw1OQZtYsMDKwBYuUqgEaxEgTeTQxFiE1dXgTWdlFdxyhGYN9LM2gQaJVoB46aLN4ctWg19LVjH/nDrtltwJ42IFa4HG8JUMFLpBTm8ETSHeA53K+SAmkELE8jWqMPfY7/ICzYFWHfcdbhv40KIVok3Z+RBH6XHHj7ivYWbQZvOL+N6+vHEk6fPnoejCh8dfQuo5SHkjB158fLV6zdvg3aGj4e6FWzbTkqtida74SQN8T4xGBM0UuodOwHYlW+WZosT7jok1HROgfXduW7WI1HRoviDWYT4eEzLtdubH4g98GOmZ8wsQVY2NLiXjtQ+Q/pkliE+ZLTzod/fb1bA5wMdfKwbDn4p57/6DzmL0XH42/diOvXjiLdot47+TLgkqdFfx46XLOeJtpbffyaT2Wxy8u8//8lTFfb7dNOZ1rMeX/u58xcuOtb/keQ/CDzeyUsAAAAASUVORK5CYII="
-                                                    />
-                                                </svg>
-                                            </a>
-                                            <ul class="dropdown-menu sub-menu">
-                                                <li>
-                                                    <a href="my-account/" data-toggle="modal" data-target="#modal-register-login">Sign in</a>
-                                                </li>
-                                                <li>
-                                                    <a href="my-account/" data-toggle="modal" data-target="#modal-register-login">Register</a>
-                                                </li>
-                                            </ul>';
-                                    }
-                                    ?>
+                                if (isset($_SESSION["username"])){
+                                    echo '<span>'.$_SESSION["username"].'</span>
+                                        <a href="my-account/" class="site-header__user-account--link" data-toggle="dropdown">
+                                            <svg width="32px" height="32px">
+                                                <image
+                                                    x="0px"
+                                                    y="0px"
+                                                    width="32px"
+                                                    height="32px"
+                                                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACB1BMVEW7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu3t7eys7KztLO4uLi6u7q0tbSxsrG2t7awsrC7vLu8vLy1trW8vby1tbWysrK6urq3uLe5urm9vr24ubitrq2wsbCsrazV1dXs7Oz29vb39/fw8PDe3t6vsK/v7+/////5+vnLy8urrKuxsbHGx8aur67k5OT4+Pizs7P9/f3R0tGurq7Oz87j4+OsrqzU1NTo6OiusK7+/v7k5eT4+fjGyMa7u7v6+vrMzMyrq6u+vr7Ky8ri4uLt7e3u7u7m5+bT1NOwsLC+v77Q0NDe397f39/T09O/v7/FxsX5+fn09PS9vb37+/v09fTNzs3g4ODh4uHX2Nf8/PzY2djIyMjIycjU1dTl5uXx8fHm5ubV1tVi3+TsAAAAUnRSTlMADleWxOHwxphZESftmiuDiBvN0iAq8TAW9xzX340dI5ymCPj9VV+lydDl5/P05srRnqdjCvr+EKCqipTd5Pb7IfI31NmLkAQvojIVn+PLoWIYYNJBTgAAAAFiS0dEca8HXOIAAAAHdElNRQfjBQECDwMxTbKCAAACG0lEQVQ4y21T90PTQBQ+RKpY3FisExcuEHEvFPdeXLikJLnakjbVgjESSEutqIiKIo66R90L/SNtbzTp+H66e9/37r17A4ACqqZUT63xeGqmTa+dAcrhra7rhEIXQl2iFPDMnFXKz0bdoqzIBIosdqM5RfTceYKKZRdwUJhf7/AL6iD35lAU6Gvg/ELfJe4eCgd62FGT/IuYYDGkPI5E9RASYiK9anAJyw8yFx1evhLv7buKYwoJqMCleX4ZUskVG+iaSXC936ICFS3PCRoHyItKUOw1OQZtYsMDKwBYuUqgEaxEgTeTQxFiE1dXgTWdlFdxyhGYN9LM2gQaJVoB46aLN4ctWg19LVjH/nDrtltwJ42IFa4HG8JUMFLpBTm8ETSHeA53K+SAmkELE8jWqMPfY7/ICzYFWHfcdbhv40KIVok3Z+RBH6XHHj7ivYWbQZvOL+N6+vHEk6fPnoejCh8dfQuo5SHkjB158fLV6zdvg3aGj4e6FWzbTkqtida74SQN8T4xGBM0UuodOwHYlW+WZosT7jok1HROgfXduW7WI1HRoviDWYT4eEzLtdubH4g98GOmZ8wsQVY2NLiXjtQ+Q/pkliE+ZLTzod/fb1bA5wMdfKwbDn4p57/6DzmL0XH42/diOvXjiLdot47+TLgkqdFfx46XLOeJtpbffyaT2Wxy8u8//8lTFfb7dNOZ1rMeX/u58xcuOtb/keQ/CDzeyUsAAAAASUVORK5CYII="
+                                                />
+                                            </svg>
+                                        </a>
+                                        <ul class="dropdown-menu sub-menu">
+                                            <li>
+                                                <a href="php/logout.php">Logout</a>
+                                            </li>
+                                        </ul>';
+                                }
+                                else {
+                                    echo '<a href="my-account/" class="site-header__user-account--link" data-toggle="dropdown">
+                                            <svg width="32px" height="32px">
+                                                <image
+                                                    x="0px"
+                                                    y="0px"
+                                                    width="32px"
+                                                    height="32px"
+                                                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACB1BMVEW7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu7vLu3t7eys7KztLO4uLi6u7q0tbSxsrG2t7awsrC7vLu8vLy1trW8vby1tbWysrK6urq3uLe5urm9vr24ubitrq2wsbCsrazV1dXs7Oz29vb39/fw8PDe3t6vsK/v7+/////5+vnLy8urrKuxsbHGx8aur67k5OT4+Pizs7P9/f3R0tGurq7Oz87j4+OsrqzU1NTo6OiusK7+/v7k5eT4+fjGyMa7u7v6+vrMzMyrq6u+vr7Ky8ri4uLt7e3u7u7m5+bT1NOwsLC+v77Q0NDe397f39/T09O/v7/FxsX5+fn09PS9vb37+/v09fTNzs3g4ODh4uHX2Nf8/PzY2djIyMjIycjU1dTl5uXx8fHm5ubV1tVi3+TsAAAAUnRSTlMADleWxOHwxphZESftmiuDiBvN0iAq8TAW9xzX340dI5ymCPj9VV+lydDl5/P05srRnqdjCvr+EKCqipTd5Pb7IfI31NmLkAQvojIVn+PLoWIYYNJBTgAAAAFiS0dEca8HXOIAAAAHdElNRQfjBQECDwMxTbKCAAACG0lEQVQ4y21T90PTQBQ+RKpY3FisExcuEHEvFPdeXLikJLnakjbVgjESSEutqIiKIo66R90L/SNtbzTp+H66e9/37r17A4ACqqZUT63xeGqmTa+dAcrhra7rhEIXQl2iFPDMnFXKz0bdoqzIBIosdqM5RfTceYKKZRdwUJhf7/AL6iD35lAU6Gvg/ELfJe4eCgd62FGT/IuYYDGkPI5E9RASYiK9anAJyw8yFx1evhLv7buKYwoJqMCleX4ZUskVG+iaSXC936ICFS3PCRoHyItKUOw1OQZtYsMDKwBYuUqgEaxEgTeTQxFiE1dXgTWdlFdxyhGYN9LM2gQaJVoB46aLN4ctWg19LVjH/nDrtltwJ42IFa4HG8JUMFLpBTm8ETSHeA53K+SAmkELE8jWqMPfY7/ICzYFWHfcdbhv40KIVok3Z+RBH6XHHj7ivYWbQZvOL+N6+vHEk6fPnoejCh8dfQuo5SHkjB158fLV6zdvg3aGj4e6FWzbTkqtida74SQN8T4xGBM0UuodOwHYlW+WZosT7jok1HROgfXduW7WI1HRoviDWYT4eEzLtdubH4g98GOmZ8wsQVY2NLiXjtQ+Q/pkliE+ZLTzod/fb1bA5wMdfKwbDn4p57/6DzmL0XH42/diOvXjiLdot47+TLgkqdFfx46XLOeJtpbffyaT2Wxy8u8//8lTFfb7dNOZ1rMeX/u58xcuOtb/keQ/CDzeyUsAAAAASUVORK5CYII="
+                                                />
+                                            </svg>
+                                        </a>
+                                        <ul class="dropdown-menu sub-menu">
+                                            <li>
+                                                <a href="my-account/" data-toggle="modal" data-target="#modal-register-login">Sign in</a>
+                                            </li>
+                                            <li>
+                                                <a href="my-account/" data-toggle="modal" data-target="#modal-register-login">Register</a>
+                                            </li>
+                                        </ul>';
+                                }
+                                ?>
                             </div>
                         </div>
                     </div>
@@ -283,12 +283,12 @@
                                                                 <!-- Card -->
                                                                 <?php
                                                                 include 'php/db.php';
-                                                                $query = "SELECT * FROM movie";
+                                                                $query = "SELECT * FROM movie WHERE category='popular'";
                                                                 $result = mysqli_query($connect, $query);
                                                                 while($row = mysqli_fetch_array($result)){
                                                                     echo '<div class="post-2930 movie type-movie status-publish has-post-thumbnail hentry movie_genre-action">
                                                                             <div class="movie__poster">
-                                                                                <a href="movie/delta-bravo/" class="masvideos-LoopMovie-link masvideos-loop-movie__link movie__link">
+                                                                                <a href="movie/?id='.$row["id"].'" class="masvideos-LoopMovie-link masvideos-loop-movie__link movie__link">
                                                                                     <img
                                                                                         width="300"
                                                                                         height="450"
@@ -304,7 +304,7 @@
                                                                                         <div class="movie__meta">
                                                                                             <span class="movie__meta--release-year">2017</span><span class="movie__meta--genre"><a href="movie-genre/action/" rel="tag">Action</a></span>
                                                                                         </div>
-                                                                                        <a href="movie/delta-bravo/" class="masvideos-LoopMovie-link masvideos-loop-movie__link movie__link">
+                                                                                        <a href="movie/?id='.$row["id"].'" class="masvideos-LoopMovie-link masvideos-loop-movie__link movie__link">
                                                                                             <h3 class="masvideos-loop-movie__title movie__title">
                                                                                                 '.$row["name"].'
                                                                                             </h3>
@@ -318,9 +318,9 @@
                                                                                         </div>
                                                                                     </div>
                                                                                     <div class="movie__actions">
-                                                                                        <a href="movie/delta-bravo/" class="movie-actions--link_watch">Watch Now</a>
+                                                                                        <a href="movie/?id='.$row["id"].'" class="movie-actions--link_watch">Watch Now</a>
                                                                                         <div class="movie-actions--link_add-to-playlist dropdown">
-                                                                                            <a class="dropdown-toggle" href="movie/delta-bravo/" data-toggle="dropdown">+ Playlist</a>
+                                                                                            <a class="dropdown-toggle" href="movie/?id='.$row["id"].'" data-toggle="dropdown">+ Playlist</a>
                                                                                             <div class="dropdown-menu">
                                                                                                 <a class="login-link" href="my-account/movie-playlists/">Sign in to add this movie to a playlist.</a>
                                                                                             </div>
@@ -328,7 +328,7 @@
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="movie__review-info">
-                                                                                    <a href="movie/delta-bravo/#reviews" class="avg-rating">
+                                                                                    <a href="movie/?id='.$row["id"].'#reviews" class="avg-rating">
                                                                                         <span class="rating-with-count">
                                                                                             <svg class="vodi-svg" width="40px" height="39px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 39">
                                                                                                 <title>play</title>
@@ -357,11 +357,11 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="home-section__footer-view-more-action">
+                                            <!-- <div class="home-section__footer-view-more-action">
                                                 <span class="home-section__footer-view-more-action__inner">
                                                     <a href="movies/" class="home-section__footer-view-more-action--link">+ View more</a>
                                                 </span>
-                                            </div>
+                                            </div> -->
                                         </section>
                                         <!-- Popular Movie End -->
 
@@ -405,12 +405,12 @@
                                                                         <!-- Card -->
                                                                         <?php
                                                                         include 'php/db.php';
-                                                                        $query = "SELECT * FROM movie";
+                                                                        $query = "SELECT * FROM movie WHERE category='romantic'";
                                                                         $result = mysqli_query($connect, $query);
                                                                         while($row = mysqli_fetch_array($result)){
                                                                             echo '<div class="post-2930 movie type-movie status-publish has-post-thumbnail hentry movie_genre-action">
                                                                                         <div class="movie__poster">
-                                                                                            <a href="movie/delta-bravo/" class="masvideos-LoopMovie-link masvideos-loop-movie__link movie__link">
+                                                                                            <a href="movie/?id='.$row["id"].'" class="masvideos-LoopMovie-link masvideos-loop-movie__link movie__link">
                                                                                                 <img
                                                                                                     width="300"
                                                                                                     height="450"
@@ -426,7 +426,7 @@
                                                                                                     <div class="movie__meta">
                                                                                                         <span class="movie__meta--release-year">2017</span><span class="movie__meta--genre"><a href="movie-genre/action/" rel="tag">Action</a></span>
                                                                                                     </div>
-                                                                                                    <a href="movie/delta-bravo/" class="masvideos-LoopMovie-link masvideos-loop-movie__link movie__link">
+                                                                                                    <a href="movie/?id='.$row["id"].'" class="masvideos-LoopMovie-link masvideos-loop-movie__link movie__link">
                                                                                                         <h3 class="masvideos-loop-movie__title movie__title">
                                                                                                             '.$row["name"].'
                                                                                                         </h3>
@@ -441,9 +441,9 @@
                                                                                                     </div>
                                                                                                 </div>
                                                                                                 <div class="movie__actions">
-                                                                                                    <a href="movie/delta-bravo/" class="movie-actions--link_watch">Watch Now</a>
+                                                                                                    <a href="movie/?id='.$row["id"].'" class="movie-actions--link_watch">Watch Now</a>
                                                                                                     <div class="movie-actions--link_add-to-playlist dropdown">
-                                                                                                        <a class="dropdown-toggle" href="movie/delta-bravo/" data-toggle="dropdown">+ Playlist</a>
+                                                                                                        <a class="dropdown-toggle" href="movie/?id='.$row["id"].'" data-toggle="dropdown">+ Playlist</a>
                                                                                                         <div class="dropdown-menu">
                                                                                                             <a class="login-link" href="my-account/movie-playlists/">Sign in to add this movie to a playlist.</a>
                                                                                                         </div>
@@ -451,7 +451,7 @@
                                                                                                 </div>
                                                                                             </div>
                                                                                             <div class="movie__review-info">
-                                                                                                <a href="movie/delta-bravo/#reviews" class="avg-rating">
+                                                                                                <a href="movie/?id='.$row["id"].'#reviews" class="avg-rating">
                                                                                                     <span class="rating-with-count">
                                                                                                         <svg class="vodi-svg" width="40px" height="39px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 39">
                                                                                                             <title>play</title>
@@ -525,12 +525,12 @@
                                                                         <!-- Card -->
                                                                         <?php
                                                                         include 'php/db.php';
-                                                                        $query = "SELECT * FROM movie";
+                                                                        $query = "SELECT * FROM movie WHERE category='action' OR category='drama'";
                                                                         $result = mysqli_query($connect, $query);
                                                                         while($row = mysqli_fetch_array($result)){
                                                                         echo '<div class="post-722 movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-comedy movie_tag-4k-ultra movie_tag-brother movie_tag-premieres movie_tag-viking">
                                                                                 <div class="movie__poster">
-                                                                                    <a href="movie/oh-lucy/" class="masvideos-LoopMovie-link masvideos-loop-movie__link movie__link">
+                                                                                    <a href="movie/?id='.$row["id"].'" class="masvideos-LoopMovie-link masvideos-loop-movie__link movie__link">
                                                                                         <img
                                                                                             width="300"
                                                                                             height="450"
@@ -547,7 +547,7 @@
                                                                                                 <span class="movie__meta--release-year">2018</span>
                                                                                                 <span class="movie__meta--genre"><a href="movie-genre/action/" rel="tag">Action</a>, <a href="movie-genre/comedy/" rel="tag">Comedy</a></span>
                                                                                             </div>
-                                                                                            <a href="movie/oh-lucy/" class="masvideos-LoopMovie-link masvideos-loop-movie__link movie__link">
+                                                                                            <a href="movie/?id='.$row["id"].'" class="masvideos-LoopMovie-link masvideos-loop-movie__link movie__link">
                                                                                                 <h3 class="masvideos-loop-movie__title movie__title">
                                                                                                     '.$row["name"].'
                                                                                                 </h3>
@@ -561,9 +561,9 @@
                                                                                             </div>
                                                                                         </div>
                                                                                         <div class="movie__actions">
-                                                                                            <a href="movie/oh-lucy/" class="movie-actions--link_watch">Watch Now</a>
+                                                                                            <a href="movie/?id='.$row["id"].'" class="movie-actions--link_watch">Watch Now</a>
                                                                                             <div class="movie-actions--link_add-to-playlist dropdown">
-                                                                                                <a class="dropdown-toggle" href="movie/oh-lucy/" data-toggle="dropdown">+ Playlist</a>
+                                                                                                <a class="dropdown-toggle" href="movie/?id='.$row["id"].'" data-toggle="dropdown">+ Playlist</a>
                                                                                                 <div class="dropdown-menu">
                                                                                                     <a class="login-link" href="my-account/movie-playlists/">Sign in to add this movie to a playlist.</a>
                                                                                                 </div>
@@ -571,7 +571,7 @@
                                                                                         </div>
                                                                                     </div>
                                                                                     <div class="movie__review-info">
-                                                                                        <a href="movie/oh-lucy/#reviews" class="avg-rating">
+                                                                                        <a href="movie/?id='.$row["id"].'#reviews" class="avg-rating">
                                                                                             <span class="rating-with-count">
                                                                                                 <svg class="vodi-svg" width="40px" height="39px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 39">
                                                                                                     <title>play</title>
@@ -644,12 +644,12 @@
                                                                         <!-- Card -->
                                                                         <?php
                                                                         include 'php/db.php';
-                                                                        $query = "SELECT * FROM movie";
+                                                                        $query = "SELECT * FROM movie WHERE category='funny'";
                                                                         $result = mysqli_query($connect, $query);
                                                                         while($row = mysqli_fetch_array($result)){
                                                                         echo '<div class="post-722 movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-comedy movie_tag-4k-ultra movie_tag-brother movie_tag-premieres movie_tag-viking">
                                                                                 <div class="movie__poster">
-                                                                                    <a href="movie/oh-lucy/" class="masvideos-LoopMovie-link masvideos-loop-movie__link movie__link">
+                                                                                    <a href="movie/?id='.$row["id"].'" class="masvideos-LoopMovie-link masvideos-loop-movie__link movie__link">
                                                                                         <img
                                                                                             width="300"
                                                                                             height="450"
@@ -666,7 +666,7 @@
                                                                                                 <span class="movie__meta--release-year">2018</span>
                                                                                                 <span class="movie__meta--genre"><a href="movie-genre/action/" rel="tag">Action</a>, <a href="movie-genre/comedy/" rel="tag">Comedy</a></span>
                                                                                             </div>
-                                                                                            <a href="movie/oh-lucy/" class="masvideos-LoopMovie-link masvideos-loop-movie__link movie__link">
+                                                                                            <a href="movie/?id='.$row["id"].'" class="masvideos-LoopMovie-link masvideos-loop-movie__link movie__link">
                                                                                                 <h3 class="masvideos-loop-movie__title movie__title">
                                                                                                     '.$row["name"].'
                                                                                                 </h3>
@@ -680,9 +680,9 @@
                                                                                             </div>
                                                                                         </div>
                                                                                         <div class="movie__actions">
-                                                                                            <a href="movie/oh-lucy/" class="movie-actions--link_watch">Watch Now</a>
+                                                                                            <a href="movie/?id='.$row["id"].'" class="movie-actions--link_watch">Watch Now</a>
                                                                                             <div class="movie-actions--link_add-to-playlist dropdown">
-                                                                                                <a class="dropdown-toggle" href="movie/oh-lucy/" data-toggle="dropdown">+ Playlist</a>
+                                                                                                <a class="dropdown-toggle" href="movie/?id='.$row["id"].'" data-toggle="dropdown">+ Playlist</a>
                                                                                                 <div class="dropdown-menu">
                                                                                                     <a class="login-link" href="my-account/movie-playlists/">Sign in to add this movie to a playlist.</a>
                                                                                                 </div>
@@ -690,7 +690,7 @@
                                                                                         </div>
                                                                                     </div>
                                                                                     <div class="movie__review-info">
-                                                                                        <a href="movie/oh-lucy/#reviews" class="avg-rating">
+                                                                                        <a href="movie/?id='.$row["id"].'#reviews" class="avg-rating">
                                                                                             <span class="rating-with-count">
                                                                                                 <svg class="vodi-svg" width="40px" height="39px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 39">
                                                                                                     <title>play</title>
@@ -751,12 +751,12 @@
                                                                 <!-- Card -->
                                                                 <?php
                                                                     include 'php/db.php';
-                                                                    $query = "SELECT * FROM movie";
+                                                                    $query = "SELECT * FROM movie WHERE category='tv_series'";
                                                                     $result = mysqli_query($connect, $query);
                                                                     while($row = mysqli_fetch_array($result)){
                                                                         echo '<div class="tv-show post-2571 tv_show type-tv_show status-publish has-post-thumbnail hentry tv_show_genre-action tv_show_genre-drama tv_show_tag-brother tv_show_tag-brother-relationship tv_show_tag-kings tv_show_tag-vikings">
                                                                             <div class="tv-show__poster">
-                                                                                <a href="tv-show/chicago-med-2/" class="masvideos-LoopTvShow-link masvideos-loop-tv-show__link tv-show__link">
+                                                                                <a href="movie/?id='.$row["id"].'" class="masvideos-LoopTvShow-link masvideos-loop-tv-show__link tv-show__link">
                                                                                     <img
                                                                                         width="970"
                                                                                         height="550"
@@ -773,7 +773,7 @@
                                                                                             <span class="tv-show__meta--genre"><a href="tv-show-genre/action/" rel="tag">Action</a>, <a href="tv-show-genre/drama/" rel="tag">Drama</a></span>
                                                                                             <span class="tv-show__meta--release-year">2015 to 2016 &#8211; 2016</span>
                                                                                         </div>
-                                                                                        <a href="tv-show/chicago-med-2/" class="masvideos-LoopTvShow-link masvideos-loop-tv-show__link tv-show__link">
+                                                                                        <a href="movie/?id='.$row["id"].'" class="masvideos-LoopTvShow-link masvideos-loop-tv-show__link tv-show__link">
                                                                                             <h3 class="masvideos-loop-tv-show__title tv-show__title">
                                                                                                 '.$row["name"].'
                                                                                             </h3>
@@ -792,9 +792,9 @@
                                                                                         </div>
                                                                                     </div>
                                                                                     <div class="tv-show__actions">
-                                                                                        <a href="tv-show/chicago-med-2/" class="tv-show-actions--link_watch">Watch Now</a>
+                                                                                        <a href="movie/?id='.$row["id"].'" class="tv-show-actions--link_watch">Watch Now</a>
                                                                                         <div class="tv-show-actions--link_add-to-playlist dropdown">
-                                                                                            <a class="dropdown-toggle" href="tv-show/chicago-med-2/" data-toggle="dropdown">+ Playlist</a>
+                                                                                            <a class="dropdown-toggle" href="movie/?id='.$row["id"].'" data-toggle="dropdown">+ Playlist</a>
                                                                                             <div class="dropdown-menu">
                                                                                                 <a class="login-link" href="my-account/tv-show-playlists/">Sign in to add this tv show to a playlist.</a>
                                                                                             </div>
@@ -809,28 +809,14 @@
                                                                                 <div class="tv-show__hover-area--inner">
                                                                                     <div class="tv-show__hover-area--poster">
                                                                                         <div class="tv-show__poster">
-                                                                                            <a href="tv-show/chicago-med-2/" class="masvideos-LoopTvShow-link masvideos-loop-tv-show__link tv-show__link">
+                                                                                            <a href="movie/?id='.$row["id"].'" class="masvideos-LoopTvShow-link masvideos-loop-tv-show__link tv-show__link">
                                                                                                 <img
                                                                                                     width="970"
                                                                                                     height="550"
-                                                                                                    src="uploads/sites/2/2019/04/42-limit.jpg"
+                                                                                                    src="uploads/'.$row["image"].'"
                                                                                                     class="tv-show__poster--image tv_show__poster--image"
                                                                                                     alt=""
-                                                                                                    srcset="
-                                                                                                        uploads/sites/2/2019/04/42-limit.jpg         970w,
-                                                                                                        uploads/sites/2/2019/04/42-limit-270x153.jpg 270w,
-                                                                                                        uploads/sites/2/2019/04/42-limit-220x125.jpg 220w,
-                                                                                                        uploads/sites/2/2019/04/42-limit-324x184.jpg 324w,
-                                                                                                        uploads/sites/2/2019/04/42-limit-272x155.jpg 272w,
-                                                                                                        uploads/sites/2/2019/04/42-limit-214x122.jpg 214w,
-                                                                                                        uploads/sites/2/2019/04/42-limit-244x138.jpg 244w,
-                                                                                                        uploads/sites/2/2019/04/42-limit-339x192.jpg 339w,
-                                                                                                        uploads/sites/2/2019/04/42-limit-327x185.jpg 327w,
-                                                                                                        uploads/sites/2/2019/04/42-limit-300x170.jpg 300w,
-                                                                                                        uploads/sites/2/2019/04/42-limit-768x435.jpg 768w,
-                                                                                                        uploads/sites/2/2019/04/42-limit-120x67.jpg  120w
-                                                                                                    "
-                                                                                                    sizes="(max-width: 970px) 100vw, 970px"
+                                                                                                    
                                                                                                 />
                                                                                             </a>
                                                                                         </div>
@@ -839,7 +825,7 @@
                                                                                                 <span class="tv-show__meta--genre"><a href="tv-show-genre/action/" rel="tag">Action</a>, <a href="tv-show-genre/drama/" rel="tag">Drama</a></span>
                                                                                                 <span class="tv-show__meta--release-year">2015 to 2016 &#8211; 2016</span>
                                                                                             </div>
-                                                                                            <a href="tv-show/chicago-med-2/" class="masvideos-LoopTvShow-link masvideos-loop-tv-show__link tv-show__link">
+                                                                                            <a href="movie/?id='.$row["id"].'" class="masvideos-LoopTvShow-link masvideos-loop-tv-show__link tv-show__link">
                                                                                                 <h3 class="masvideos-loop-tv-show__title tv-show__title">
                                                                                                     Chicago Med
                                                                                                 </h3>
@@ -850,7 +836,7 @@
                                                                                         <div class="tv-show__season-info">
                                                                                             <div class="tv-show__seasons">
                                                                                                 Seasons #:
-                                                                                                <a href="tv-show/chicago-med-2/" class="tv-show__episode--link">Season 1</a><a href="tv-show/chicago-med-2/" class="tv-show__episode--link">Season 2</a>
+                                                                                                <a href="movie/?id='.$row["id"].'" class="tv-show__episode--link">Season 1</a><a href="movie/?id='.$row["id"].'" class="tv-show__episode--link">Season 2</a>
                                                                                             </div>
                                                                                             <div class="tv-show__episode">
                                                                                                 Newest Episode:
@@ -862,9 +848,9 @@
                                                                                             <div class="viewers-count"></div>
                                                                                         </div>
                                                                                         <div class="tv-show__actions">
-                                                                                            <a href="tv-show/chicago-med-2/" class="tv-show-actions--link_watch">Watch Now</a>
+                                                                                            <a href="movie/?id='.$row["id"].'" class="tv-show-actions--link_watch">Watch Now</a>
                                                                                             <div class="tv-show-actions--link_add-to-playlist dropdown">
-                                                                                                <a class="dropdown-toggle" href="tv-show/chicago-med-2/" data-toggle="dropdown">+ Playlist</a>
+                                                                                                <a class="dropdown-toggle" href="movie/?id='.$row["id"].'" data-toggle="dropdown">+ Playlist</a>
                                                                                                 <div class="dropdown-menu">
                                                                                                     <a class="login-link" href="my-account/tv-show-playlists/">Sign in to add this tv show to a playlist.</a>
                                                                                                 </div>
@@ -923,12 +909,12 @@
                                                                         <!-- Card -->
                                                                         <?php
                                                                         include 'php/db.php';
-                                                                        $query = "SELECT * FROM movie";
+                                                                        $query = "SELECT * FROM movie WHERE category='tv_episodes'";
                                                                         $result = mysqli_query($connect, $query);
                                                                         while($row = mysqli_fetch_array($result)){
                                                                         echo '<div class="post-722 movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-comedy movie_tag-4k-ultra movie_tag-brother movie_tag-premieres movie_tag-viking">
                                                                                 <div class="movie__poster">
-                                                                                    <a href="movie/oh-lucy/" class="masvideos-LoopMovie-link masvideos-loop-movie__link movie__link">
+                                                                                    <a href="movie/?id='.$row["id"].'" class="masvideos-LoopMovie-link masvideos-loop-movie__link movie__link">
                                                                                         <img
                                                                                             width="300"
                                                                                             height="450"
@@ -945,7 +931,7 @@
                                                                                                 <span class="movie__meta--release-year">2018</span>
                                                                                                 <span class="movie__meta--genre"><a href="movie-genre/action/" rel="tag">Action</a>, <a href="movie-genre/comedy/" rel="tag">Comedy</a></span>
                                                                                             </div>
-                                                                                            <a href="movie/oh-lucy/" class="masvideos-LoopMovie-link masvideos-loop-movie__link movie__link">
+                                                                                            <a href="movie/?id='.$row["id"].'" class="masvideos-LoopMovie-link masvideos-loop-movie__link movie__link">
                                                                                                 <h3 class="masvideos-loop-movie__title movie__title">
                                                                                                     '.$row["name"].'
                                                                                                 </h3>
@@ -959,9 +945,9 @@
                                                                                             </div>
                                                                                         </div>
                                                                                         <div class="movie__actions">
-                                                                                            <a href="movie/oh-lucy/" class="movie-actions--link_watch">Watch Now</a>
+                                                                                            <a href="movie/?id='.$row["id"].'" class="movie-actions--link_watch">Watch Now</a>
                                                                                             <div class="movie-actions--link_add-to-playlist dropdown">
-                                                                                                <a class="dropdown-toggle" href="movie/oh-lucy/" data-toggle="dropdown">+ Playlist</a>
+                                                                                                <a class="dropdown-toggle" href="movie/?id='.$row["id"].'" data-toggle="dropdown">+ Playlist</a>
                                                                                                 <div class="dropdown-menu">
                                                                                                     <a class="login-link" href="my-account/movie-playlists/">Sign in to add this movie to a playlist.</a>
                                                                                                 </div>
@@ -969,7 +955,7 @@
                                                                                         </div>
                                                                                     </div>
                                                                                     <div class="movie__review-info">
-                                                                                        <a href="movie/oh-lucy/#reviews" class="avg-rating">
+                                                                                        <a href="movie/?id='.$row["id"].'#reviews" class="avg-rating">
                                                                                             <span class="rating-with-count">
                                                                                                 <svg class="vodi-svg" width="40px" height="39px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 39">
                                                                                                     <title>play</title>
@@ -1233,17 +1219,17 @@
                                     <div class="masvideos-login">
                                         <div class="masvideos-login__inner">
                                             <h2>Login</h2>
-                                            <form class="masvideos-form masvideos-form-login login" method="post">
+                                            <form action="php/login.php" class="masvideos-form masvideos-form-login login" method="post">
                                                 <p class="masvideos-form-row masvideos-form-row--wide form-row form-row-wide">
                                                     <label for="username">Email address&nbsp;<span class="required">*</span></label>
-                                                    <input type="text" class="masvideos-Input masvideos-Input--text input-text" name="username" id="username" autocomplete="username" value="" />
+                                                    <input type="email" class="masvideos-Input masvideos-Input--text input-text" name="email" id="username" autocomplete="email" value="" />
                                                 </p>
                                                 <p class="masvideos-form-row masvideos-form-row--wide form-row form-row-wide">
                                                     <label for="password">Password&nbsp;<span class="required">*</span></label>
                                                     <input class="masvideos-Input masvideos-Input--text input-text" type="password" name="password" id="password" autocomplete="current-password" />
                                                 </p>
                                                 <p class="form-row">
-                                                    <input type="hidden" id="masvideos-login-nonce" name="masvideos-login-nonce" value="5dedfce4cf" /><input type="hidden" name="_wp_http_referer" value="/vodi-demos/main/" />
+                                                    <input type="hidden" id="masvideos-login-nonce" name="masvideos-login-nonce" /><input type="hidden" name="_wp_http_referer" />
                                                     <button type="submit" class="masvideos-Button button" name="login" value="Log in">
                                                         Log in
                                                     </button>

@@ -2009,7 +2009,7 @@
                                     <div class="single-movie__player-container--inner container">
 									<?php
 										include '../php/db.php';
-										$query = "SELECT * FROM recomended_movie WHERE id='$id'";
+										$query = "SELECT * FROM movie WHERE id='$id'";
 										$result = mysqli_query($connect, $query);
 										while($row = mysqli_fetch_array($result)){
 											echo '<nav class="masvideos-breadcrumb">
@@ -2039,12 +2039,12 @@
 										<!-- body -->
 										<?php
 										include '../php/db.php';
-										$query = "SELECT * FROM recomended_movie WHERE id='$id'";
+										$query = "SELECT * FROM movie WHERE id='$id'";
 										$result = mysqli_query($connect, $query);
 										while($row = mysqli_fetch_array($result)){
                                         echo '<div class="movie__head">
                                             <div class="movie__player">
-                                                <iframe width="1024" height="574" src="https://www.youtube.com/embed/AEBIJRAkujM" frameborder="0" allowfullscreen></iframe>
+                                                <iframe width="1024" height="574" src="'.$row["link"].'" frameborder="0" allowfullscreen></iframe>
                                             </div>
                                         </div>
 
@@ -2096,7 +2096,7 @@
 
 												<?php
 													include '../php/db.php';
-													$query = "SELECT * FROM recomended_movie";
+													$query = "SELECT * FROM movie WHERE category != 'recomended'";
 													$result = mysqli_query($connect, $query);
 													while($row = mysqli_fetch_array($result)){
 														echo '<div class="post-286 movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-sci-fi movie_tag-4k-ultra movie_tag-brother movie_tag-king movie_tag-viking">
@@ -2182,7 +2182,7 @@
                                             <div id="movie__description-tab" class="movie__description-tab">
 											<?php
 												include '../php/db.php';
-												$query = "SELECT * FROM recomended_movie WHERE id='$id'";
+												$query = "SELECT * FROM movie WHERE id='$id'";
 												$result = mysqli_query($connect, $query);
 												while($row = mysqli_fetch_array($result)){
 													echo '<div class="movie__info--left">

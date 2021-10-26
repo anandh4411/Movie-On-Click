@@ -1,6 +1,9 @@
 <?php session_start();
-if (isset($_SESSION["admin-username"])){
-  echo '<!DOCTYPE html>
+if (!isset($_SESSION["admin-username"])){
+  header("Location: ../index.php");
+}
+?>
+<!DOCTYPE html>
   <html lang="en">
   <head>
       <meta charset="UTF-8">
@@ -24,9 +27,11 @@ if (isset($_SESSION["admin-username"])){
               <li class="nav-item active">
                 <a class="nav-link" href="home.html">Home</a>
               </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">'.$_SESSION["admin-username"].'</a>
-                </li>
+              <?php
+                echo '<li class="nav-item">
+                        <a class="nav-link" href="#">'.$_SESSION["admin-username"].'</a>
+                      </li>';
+              ?>
               <li class="nav-item">
                 <a class="nav-link" href="../php/logout.php">Logout</a>
               </li>
@@ -37,9 +42,7 @@ if (isset($_SESSION["admin-username"])){
   
       <div class="container">
         <div class="row">
-  
-          <!-- New Movie -->
-          <div class="">
+
             <!-- New Movie -->
             <div class="card" style="width: 25rem;">
               <h4>Add a new Movie</h4>
@@ -82,15 +85,43 @@ if (isset($_SESSION["admin-username"])){
               </form>
             </div>
             <!-- New Movie End -->
-          </div>
-          <!-- New Movie End -->
   
+        </div>
+        <!-- All Movie List -->
+        <div style="margin-top: 100px;" class="container">
+          <h2 class="text-center">List of movies we have</h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Image</th>
+                <th scope="col">Name</th>
+                <th scope="col">Year</th>
+                <th scope="col">Duration</th>
+                <th scope="col">Category</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php
+              include '../php/db.php';
+              $query = "SELECT * FROM movie";
+              $result = mysqli_query($connect, $query);
+              while($row = mysqli_fetch_array($result)){
+                    echo '<tr>
+                            <th scope="row">'.$row["id"].'</th>
+                            <td><img id="img-preview" src="../../uploads/'.$row["image"].'"/></td>
+                            <td>'.$row["name"].'</td>
+                            <td>'.$row["year"].'</td>
+                            <td>'.$row["duration"].'</td>
+                            <td>'.$row["category"].'</td>
+                            <td><a href="../php/movie/update-movie.php?id='.$row["id"].'" class="btn btn-primary">Update</a></td>
+                            <td><a href="../php/movie/delete-movie.php?id='.$row["id"].'" class="btn btn-danger">Delete</a></td>
+                          </tr>';
+              }
+              ?>
+            </tbody>
+          </table>
         </div>
       </div>
   </body>
-  </html>';
-}
-else {
-  header("Location: ../index.php");
-}
-?>
+</html>
